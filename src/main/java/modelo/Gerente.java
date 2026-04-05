@@ -8,6 +8,21 @@ package modelo;
  *
  * @author RYZEN
  */
-public class Gerente {
+public class Gerente extends Empleado {
+    private double bono;
     
-}
+    public Gerente(String nombre, double salarioBase , double bono) {
+            super(nombre, salarioBase); //herencia del constructor
+            this.bono = bono;
+    }
+    
+    @Override
+    public double calcularPago(){
+    return salarioBase +bono;    
+        
+        
+        
+        }
+    }
+
+
